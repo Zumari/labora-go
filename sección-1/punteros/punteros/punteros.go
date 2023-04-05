@@ -9,17 +9,10 @@ func main() {
 
 	fmt.Printf("Valores iniciales: a = %v, b= %v\n", a, b)
 
-	fmt.Println("a = ", a)
-	fmt.Println("b = ", b)
-	fmt.Println("*ptrA = ", *ptrA)
-	fmt.Println("*ptrA = ", &ptrA)
+	a = *ptrA + b
+	b = *ptrA - b
+	a = *ptrA - b
 
-	a = *ptrA
-
-	fmt.Println("a = ", a)
-	fmt.Println("b = ", b)
-	fmt.Println("*ptrA = ", *ptrA)
-	fmt.Println("*ptrA = ", &ptrA)
-	fmt.Printf("Valores finales: a= %v, b= %v", *ptrA, b)
+	fmt.Printf("Valores finales: a= %v, b= %v", a, b)
 
 }
