@@ -53,7 +53,6 @@ func buscarEdad(personas []Persona, edad int) *Persona {
 	for i := 0; i < len(personas); i++ {
 		if personas[i].edad == edad {
 			return &personas[i]
-			break
 		}
 	}
 	return new(Persona)
