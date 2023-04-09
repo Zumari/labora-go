@@ -1,3 +1,7 @@
+// - 1030 segundos son 17 minutos con 10 segundos
+// - 12045 segundos son 3 horas, 20 minutos con 45 segundos
+// - 176520 segundos son 2 días, 1 hora, 2 minutos con 0 segundos.
+
 package main
 
 import (
@@ -45,10 +49,10 @@ func main() {
 
 			fmt.Printf("\n=================================== \nEquivale a: \n%v días. \n%v horas. \n%v minutos. \n%v segundos. \n", dia, hor, min, seg)
 
-		} else {
-			fmt.Println("El número debe ser mayor que cero")
 		}
 
+	} else {
+		fmt.Println("El número debe ser mayor que cero")
 	}
 
 }
