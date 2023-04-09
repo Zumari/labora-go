@@ -22,7 +22,7 @@ func main() {
 
 func textoInicial(accion *int, nombre *string, edad *int, altura *int, peso *int, personas *[]Persona) {
 
-	fmt.Println("¿Qué desea hacer? \n1. Crear persona \n2. Ordenar personas \n3. Buscar persona \n4. Ver personas \n5. Salir")
+	fmt.Println("¿Qué desea hacer? \n1. Crear persona \n2. Ordenar personas \n3. Buscar persona \n4. Ver personas \n5. Salir \n\nIngrese acción a realizar: ")
 	fmt.Scan(accion)
 	if *accion > 0 && *accion < 6 {
 		acciones(accion, *nombre, *edad, *altura, *peso, *personas)
@@ -66,7 +66,7 @@ func acciones(accion *int, nombre string, edad int, altura int, peso int, person
 		if personas == nil {
 			fmt.Printf("No se encontraron personas\n")
 		} else {
-			fmt.Printf("\nPersonas encontradas:")
+			fmt.Printf("\nPersonas encontradas:\n")
 			fmt.Println("==========================")
 
 			for i := 0; i < len(personas); i++ {
