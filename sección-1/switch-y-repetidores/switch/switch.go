@@ -4,20 +4,6 @@ import (
 	"fmt"
 )
 
-func main() {
-
-	var dia int
-
-	fmt.Println("Ingrese un número del 1 al 7: ")
-	fmt.Scan(&dia)
-	if dia > 1 && dia < 7 {
-		diaSemana(dia)
-	} else {
-		fmt.Println("Dígito no válido")
-	}
-
-}
-
 func diaSemana(x int) {
 
 	switch x {
@@ -36,6 +22,20 @@ func diaSemana(x int) {
 	case 7:
 		fmt.Println("Domingo")
 
+	}
+
+}
+
+func main() {
+
+	var dia int
+
+	fmt.Println("Ingrese un número del 1 al 7: ")
+	fmt.Scan(&dia)
+	if dia > 1 && dia < 7 {
+		diaSemana(dia)
+	} else {
+		fmt.Println("Dígito no válido")
 	}
 
 }

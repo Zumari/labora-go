@@ -2,6 +2,19 @@ package main
 
 import "fmt"
 
+type Planeta struct {
+	name   string
+	moonsq int
+}
+
+func mostrarPlanetas(planetas []Planeta) {
+	for i := 0; i < len(planetas); i++ {
+
+		fmt.Printf("\nEl planeta %v tiene %v lunas.", planetas[i].name, planetas[i].moonsq)
+
+	}
+}
+
 func main() {
 
 	mercurio := Planeta{name: "mercurio", moonsq: 0}
@@ -21,17 +34,4 @@ func main() {
 		fmt.Print("No se encontraron planetas")
 	}
 
-}
-
-func mostrarPlanetas(planetas []Planeta) {
-	for i := 0; i < len(planetas); i++ {
-
-		fmt.Printf("\nEl planeta %v tiene %v lunas.", planetas[i].name, planetas[i].moonsq)
-
-	}
-}
-
-type Planeta struct {
-	name   string
-	moonsq int
 }
