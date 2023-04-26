@@ -37,7 +37,7 @@ func main() {
 	var wg sync.WaitGroup
 	var c = make(chan int)
 
-	first = 10
+	first = 1
 	last = 100
 	wgroups = 10
 
@@ -45,10 +45,10 @@ func main() {
 
 	for i := 0; i < wgroups; i++ {
 		wg.Add(1)
-		// go suma(groups*i+1, groups*(i+1), c, &wg)
+		go suma(groups*i+1, groups*(i+1), c, &wg)
 		// go suma(first+i*groups, first+(i+1)*groups, c, &wg)
 		// go suma(first+i*(groups+1), first+(i+1)*groups, c, &wg)
-		go suma(first*(i+1), first+groups, c, &wg)
+		// go suma(first*(i+1), first+groups, c, &wg)
 	}
 
 	go func() {
